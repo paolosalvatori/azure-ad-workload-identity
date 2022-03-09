@@ -99,7 +99,7 @@ This sample provides a Visual Studio solution under the `src` folder that contai
 
 ## Infrastructure Deployment
 
-You can use the `deploy.sh` Bash script under the `arm/scripts` folder to deploy the infrastructure to Azure. Make sure to change the name of the AKS cluster in the `deploy.sh` Bash script and substitute the placeholders in the `azuredeploy.parameters.json` file with meaningful values. Also, make sure to enable the following public preview features before deploying the ARM template:
+You can use the `deploy.sh` Bash script under the `templates` folder to deploy the infrastructure to Azure. Make sure to change the name of the AKS cluster in the `deploy.sh` Bash script and substitute the placeholders in the `azuredeploy.parameters.json` file with meaningful values. Also, make sure to enable the following public preview features before deploying the ARM template:
 
 - [PodSecurityPolicyPreview](https://docs.microsoft.com/en-us/azure/aks/use-pod-security-policies)
 - [RunCommandPreview](https://docs.microsoft.com/en-us/azure/aks/private-clusters#options-for-connecting-to-the-private-cluster)
@@ -109,7 +109,7 @@ You can use the `deploy.sh` Bash script under the `arm/scripts` folder to deploy
 - [AutoUpgradePreview](https://docs.microsoft.com/en-us/azure/aks/upgrade-cluster#set-auto-upgrade-channel)
 - [EnableOIDCIssuerPreview](https://docs.microsoft.com/en-us/azure/aks/cluster-configuration#oidc-issuer-preview)
 
-The `arm/scripts/deploy.sh` deployment script automatically registers the above preview features.
+The `templates/deploy.sh` deployment script automatically registers the above preview features.
 The following picture shows the resources deployed by the ARM template in the target resource group.
 
 ![Resource Group](images/resourcegroup.png)
